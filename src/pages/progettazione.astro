@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+import logoBioProject from './img/logo.png';
+import { Image } from 'astro:assets';
+import img_01 from './img/progettazione/haas_perfect_120.jpg';
+import img_02 from './img/progettazione/haas_perfect_86.jpg';
+import img_03 from './img/progettazione/haas_s_141.jpg';
+import img_04 from './img/progettazione/haas_s_165.jpg';
+import img_05 from './img/progettazione/haas_s_165_.jpg';
+import img_06 from './img/progettazione/lanos_4_1290.jpg';
+---
+
+<Layout title="Bio Project">
+	<main>
+		<Image src={logoBioProject} height="150" alt="Logo Bio Project" />
+		<Navigation />
+		<p class="instructions">
+			Pagina PROGETTAZIONE in lavorazione...
+		</p>
+		<Image src={img_01} height="500" alt="Sketch Pianta" />
+		<Image src={img_02} height="500" alt="Sketch Pianta" />
+		<Image src={img_03} height="500" alt="Sketch Vista 3D" />
+		<Image src={img_04} height="500" alt="Sketch Vista 3D" />
+		<Image src={img_05} height="500" alt="Sketch Vista 3D" />
+		<Image src={img_06} height="500" alt="Sketch Vista 3D" />
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 35%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-light), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-dark), 12%);
+		color: rgb(var(--accent-dark));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-dark));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+		card-color-background:white;
+	}
+</style>

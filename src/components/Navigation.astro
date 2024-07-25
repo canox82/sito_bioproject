@@ -1,0 +1,63 @@
+---
+
+---
+
+<navigation>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/serramenti">Serramenti</a>
+        <a href="/progettazione">Progettazione</a>
+        <a href="/pratiche">Pratiche</a>
+        <a href="/lavori">Lavori</a>
+        <a href="/contatti">Contatti</a>
+    </div>
+</navigation>
+
+<style>
+   .nav-links {
+  width: 100%;
+  top: 5rem;
+  left: 48px;
+  background-color:rgb(251, 129, 4);
+  color: #ffffff;
+  display: none;
+  margin: 0;
+}
+
+.nav-links a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  color: rgb(251, 129, 4);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: rgb(251, 129, 4);
+  color: #ffffff;
+}
+
+.expanded {
+  display: unset;
+}
+
+@media screen and (min-width: 636px) {
+  .nav-links {
+    margin: 2em;
+    display: block;
+    position: static;
+    width: auto;
+    background: none;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    padding: 5px 5px;
+  }
+
+}
+</style>

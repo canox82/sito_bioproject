@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import { Image } from 'astro:assets';
+import logoBioProject from './img/logo.png';
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout title="Bio Project">
+	<main>
+		<Image src={logoBioProject} height="150" alt="Logo Bio Project" />
+		<Navigation />
+		<p class="instructions">
+			La soluzione completa per la <strong>Bioedilizia</strong> a Reggio Emilia e provincia.<br />
+			Ti seguiamo dalla fornitura dei serramenti alla progettazione della casa dei tuoi sogni!
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="serramenti"
+				title="Serramenti"
+				body="I migliori serramenti delle migliori marche. Osserva i cataloghi e contattaci per un preventivo o per maggiori informazioni."
+			/>
+			<Card
+				href="progettazione"
+				title="Progettazione "
+				body="Hai sempre desiderato una casa green? Guarda le nostre proposte e contattaci per valutare insieme una soluzione abitativa adatta alle tue esigenze!"
+			/>
+			<Card
+				href="pratiche"
+				title="Pratiche e consulti"
+				body="Hai bisogno di un geometra per una CILA o un altro tipo di pratica, oppure per un semplice consulto? Contattaci e troveremo una soluzione ai tuoi problemi."
+			/>
+			<Card
+				href="lavori"
+				title="I nostri progetti"
+				body="Una gallery dei nostri progetti, perché le immagini parlano più di mille parole."
+			/>
+		</ul>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 35%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-light), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-dark), 12%);
+		color: rgb(var(--accent-dark));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-dark));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+		card-color-background:white;
+	}
+</style>
