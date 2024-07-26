@@ -11,6 +11,9 @@ import Navigation from '../components/Navigation.astro';
 	<main>
 		<Image src={logoBioProject} height="150" alt="Logo Bio Project" />
 		<Navigation />
+		<p class="instructions">
+			PRATICHE
+		</p>
 		<p>Compila il modulo sottostante per sottoporci la tua richiesta, ti risponderemo quanto prima</p>
 		<p>
 			<form method="POST">
@@ -39,14 +42,6 @@ import Navigation from '../components/Navigation.astro';
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		font-size: 20px;
-		line-height: 1.6;
-	}
 	.astro-a {
 		position: absolute;
 		top: -32px;
@@ -76,6 +71,10 @@ import Navigation from '../components/Navigation.astro';
 		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-light), 33%));
 		padding: 1.5rem;
 		border-radius: 8px;
+		font-size: 1.2rem;
+		color: #ffffff;
+		font-weight: bold;
+		text-align: center;
 	}
 	.instructions code {
 		font-size: 0.8em;

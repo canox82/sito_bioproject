@@ -4,12 +4,8 @@ import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
 import logoBioProject from './img/logo.png';
 import { Image } from 'astro:assets';
-import img_01 from './img/progettazione/haas_perfect_120.jpg';
-import img_02 from './img/progettazione/haas_perfect_86.jpg';
-import img_03 from './img/progettazione/haas_s_141.jpg';
-import img_04 from './img/progettazione/haas_s_165.jpg';
-import img_05 from './img/progettazione/haas_s_165_.jpg';
-import img_06 from './img/progettazione/lanos_4_1290.jpg';
+
+import ImgProg from '../components/ImgProg.astro';
 ---
 
 <Layout title="Bio Project">
@@ -17,28 +13,67 @@ import img_06 from './img/progettazione/lanos_4_1290.jpg';
 		<Image src={logoBioProject} height="150" alt="Logo Bio Project" />
 		<Navigation />
 		<p class="instructions">
-			Pagina PROGETTAZIONE in lavorazione...
+			PROGETTAZIONE
 		</p>
-		<Image src={img_01} height="500" alt="Sketch Pianta" />
-		<Image src={img_02} height="500" alt="Sketch Pianta" />
-		<Image src={img_03} height="500" alt="Sketch Vista 3D" />
-		<Image src={img_04} height="500" alt="Sketch Vista 3D" />
-		<Image src={img_05} height="500" alt="Sketch Vista 3D" />
-		<Image src={img_06} height="500" alt="Sketch Vista 3D" />
+		<ul role="list" class="link-card-grid">
+		<ImgProg 
+			imagePath="/src/pages/img/progettazione/haas_perfect_86.jpg"
+			altText="Haas Perfect 86"
+    		name="Haas Perfect 86"
+		/>
+		<ImgProg 
+			imagePath="/src/pages/img/progettazione/haas_perfect_120.jpg"
+			altText="Haas Perfect 120"
+    		name="Haas Perfect 120"
+		/>
+		<ImgProg 
+			imagePath="/src/pages/img/progettazione/haas_s_141.jpg"
+			altText="Haas S 141"
+    		name="Haas S 141"
+		/>
+		<ImgProg 
+			imagePath="/src/pages/img/progettazione/haas_s_165.jpg"
+			altText="Haas S 165"
+    		name="Haas S 165"
+		/>
+		<ImgProg 
+			imagePath="/src/pages/img/progettazione/haas_s_165_.jpg"
+			altText="Haas S 165 - Altra vista"
+    		name="Haas S 165 - Altra vista"
+		/>
+		<ImgProg 
+			imagePath="/src/pages/img/progettazione/lanos_4_1290.jpg"
+			altText="Lanos 4 1290"
+    		name="Lanos 4 1290"
+		/>
+		</ul>
+		<p>
+			Compila il modulo per richiedere informazioni <br />
+			<form method="POST">
+				<label>
+				  Nome:
+				  <input type="text" name="nome" required />
+				</label>
+				<br />
+				<label>
+				  Email:
+				  <input type="email" name="email" required />
+				</label>
+				<br />
+				<label>
+				  Richiesta:
+				</label>
+				<br />
+				<textarea id="richiesta" name="richiesta" rows="5" cols="50" required />
+				<br />
+				<button>Invia</button>
+			  </form>
+		</p>
 	</main>
 	<Footer />
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
 	.astro-a {
 		position: absolute;
 		top: -32px;
@@ -68,6 +103,10 @@ import img_06 from './img/progettazione/lanos_4_1290.jpg';
 		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-light), 33%));
 		padding: 1.5rem;
 		border-radius: 8px;
+		font-size: 1.2rem;
+		color: #ffffff;
+		font-weight: bold;
+		text-align: center;
 	}
 	.instructions code {
 		font-size: 0.8em;
@@ -81,6 +120,7 @@ import img_06 from './img/progettazione/lanos_4_1290.jpg';
 		color: rgb(var(--accent-dark));
 	}
 	.link-card-grid {
+		text-align: center;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
