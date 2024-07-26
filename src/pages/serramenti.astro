@@ -4,14 +4,47 @@ import { Image } from 'astro:assets';
 import logoBioProject from './img/logo.png';
 import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
+
+import logoSimar from './img/serramenti/logo_simar.png';
+import logoPinto from './img/serramenti/logo_pinto.png';
+import logoSchipani from './img/serramenti/logo_schipani.png';
 ---
 
 <Layout title="Bio Project">
 	<main>
 		<Image src={logoBioProject} height="150" alt="Logo Bio Project" />
 		<Navigation />
-		<p class="instructions">
-			Pagina SERRAMENTI in lavorazione...
+		<p>
+			Seleziona uno dei nostri partner per visualizzare il relativo catalogo
+		</p>
+		<p class="center">
+			<a href="https://www.pinto.srl/configuratore/" target="#new"><Image src={logoPinto} height="50" alt="Logo Pinto" /></a>
+			<br />
+			<a href="https://www.simarsrl.it/" target="#new"><Image src={logoSimar} height="50" alt="Logo Simar" /></a>
+			<br/>
+			<a href="https://www.schipanisrl.com/prodotti" target="#new"><Image src={logoSchipani} height="50" alt="Logo Schipani" /></a>
+		</p>
+		<p>
+			Contattaci per richiedere un preventivo:
+			<form method="POST">
+				<label>
+				  Nome:
+				  <input type="text" name="nome" required />
+				</label>
+				<br />
+				<label>
+				  Email:
+				  <input type="email" name="email" required />
+				</label>
+				<br />
+				<label>
+				  Richiesta:
+				</label>
+				<br />
+				<textarea id="richiesta" name="richiesta" rows="5" cols="50" required />
+				<br />
+				<button>Invia</button>
+			  </form>
 		</p>
 		
 	</main>
@@ -24,7 +57,6 @@ import Navigation from '../components/Navigation.astro';
 		padding: 1rem;
 		width: 800px;
 		max-width: calc(100% - 2rem);
-		color: white;
 		font-size: 20px;
 		line-height: 1.6;
 	}
@@ -43,6 +75,9 @@ import Navigation from '../components/Navigation.astro';
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
+	}
+	.center{
+		text-align: center;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
