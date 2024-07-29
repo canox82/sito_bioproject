@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 
 import ImgProg from '../components/ImgProg.astro';
-const allPosts = await Astro.glob('./progettazione/*.mdx');
 ---
 
 <Layout title="Bio Project">
@@ -11,15 +10,36 @@ const allPosts = await Astro.glob('./progettazione/*.mdx');
 			PROGETTAZIONE
 		</p>
 		<ul role="list" class="link-card-grid">
-			{allPosts.map((post) =>
-					<a href={post.url}>
-						<ImgProg 
-							imagePath={post.frontmatter.image.url}
-							altText={post.frontmatter.title}
-							name={post.frontmatter.title}
-						/>
-					</a>
-			)}
+		<ImgProg 
+			imagePath="/src/pages/img/progettazione/haas_perfect_86.jpg"
+			altText="Haas Perfect 86"
+    		name="Haas Perfect 86"
+		/>
+		<ImgProg 
+			imagePath="/src/pages/img/progettazione/haas_perfect_120.jpg"
+			altText="Haas Perfect 120"
+    		name="Haas Perfect 120"
+		/>
+		<ImgProg 
+			imagePath="/src/pages/img/progettazione/haas_s_141.jpg"
+			altText="Haas S 141"
+    		name="Haas S 141"
+		/>
+		<ImgProg 
+			imagePath="/src/pages/img/progettazione/haas_s_165.jpg"
+			altText="Haas S 165"
+    		name="Haas S 165"
+		/>
+		<ImgProg 
+			imagePath="/src/pages/img/progettazione/haas_s_165_.jpg"
+			altText="Haas S 165 - Altra vista"
+    		name="Haas S 165 - Altra vista"
+		/>
+		<ImgProg 
+			imagePath="/src/pages/img/progettazione/lanos_4_1290.jpg"
+			altText="Lanos 4 1290"
+    		name="Lanos 4 1290"
+		/>
 		</ul>
 		<p>
 			Compila il modulo per richiedere informazioni <br />
@@ -44,6 +64,7 @@ const allPosts = await Astro.glob('./progettazione/*.mdx');
 			  </form>
 		</p>
 	</main>
+
 </Layout>
 
 <style>
@@ -62,10 +83,6 @@ const allPosts = await Astro.glob('./progettazione/*.mdx');
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
-	}
-	a {
-		text-decoration: none;
-		color: rgb(var(--accent-dark));
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);

@@ -4,10 +4,13 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import '../styles/global.css';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="it">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -17,44 +20,10 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<main>
+			<Header />
+			<slot />
+			<Footer />
+		</main>
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 255, 127, 0;
-		--accent-light: 255, 180, 103;
-		--accent-dark: 225, 110, 0;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #ffffff;
-		background-size: 224px;
-	}
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: rgb(120, 120, 120);
-		font-size: 14px;
-		line-height: 1.6;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
