@@ -14,7 +14,7 @@ const allPosts = await Astro.glob('./progettazione/*.mdx');
 			{allPosts.map((post) =>
 					<a href={post.url}>
 						<ImgProg 
-							imagePath={post.frontmatter.image.url}
+							imagePath={post.frontmatter.preimg}
 							altText={post.frontmatter.title}
 							name={post.frontmatter.title}
 						/>
