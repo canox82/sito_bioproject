@@ -5,7 +5,7 @@ const { frontmatter } = Astro.props;
 <Layout title={frontmatter.title}>
   <div class="center">
   <h1>{frontmatter.title}</h1>
-  <h3></h3><em>{frontmatter.description}</em></h3>
+  <h3><em>"{frontmatter.description}"</em></h3>
   <br />
   <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
   </div>
