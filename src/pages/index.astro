@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-
+const home = '/sito_bioproject';
 ---
 
 <Layout title="Bio Project">
@@ -12,22 +12,22 @@ import Card from '../components/Card.astro';
 		</p>
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="serramenti"
+				href={home + "/serramenti"}
 				title="Serramenti"
 				body="I migliori serramenti delle migliori marche. Osserva i cataloghi e contattaci per un preventivo o per maggiori informazioni."
 			/>
 			<Card
-				href="progettazione"
+				href={home +"/progettazione"}
 				title="Progettazione "
 				body="Hai sempre desiderato una casa green? Guarda le nostre proposte e contattaci per valutare insieme una soluzione abitativa adatta alle tue esigenze!"
 			/>
 			<Card
-				href="pratiche"
+				href={home+"/pratiche"}
 				title="Pratiche e consulti"
 				body="Hai bisogno di un geometra per una CILA o un altro tipo di pratica, oppure per un semplice consulto? Contattaci e troveremo una soluzione ai tuoi problemi."
 			/>
 			<Card
-				href="lavori"
+				href={home+"/lavori"}
 				title="I nostri progetti"
 				body="Una gallery dei nostri progetti, perché le immagini parlano più di mille parole."
 			/>
