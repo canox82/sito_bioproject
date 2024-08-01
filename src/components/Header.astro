@@ -1,25 +1,32 @@
 ---
-const home = '/sito_bioproject';
-import { Image } from 'astro:assets';
-import logoBioProject from '/src/pages/img/logo.png';
+const home = "/sito_bioproject";
+import { Image } from "astro:assets";
+import logoBioProject from "/src/pages/img/logo.png";
+
+import { Navbar } from 'astro-bootstrap';
+import type { NavbarItemType } from 'astro-bootstrap';
+// demonstration data
+const siteTitle = 'Astro site'; // pull this in from a config file
+const items: NavbarItemType[] = [
+  // pull this in from a config file
+  { text: 'Home', href: '/sito_bioproject' },
+  { text: 'Serramenti', href: '/sito_bioproject/serramenti' },
+  { text: 'Progettazione', href: '/sito_bioproject/progettazione' },
+  { text: 'Pratiche', href: '/sito_bioproject/pratiche' },
+  { text: 'Lavori', href: '/sito_bioproject/lavori' },
+  { text: 'Contatti', href: '/sito_bioproject/contatti' },
+ 
+];
+
+const id = 'navbarDemo';
 ---
-<div>
-  <a href={home} class="logo" >
-  <Image src={logoBioProject} height="150" alt="Logo Bio Project" />
-  </a>
-  <div class="nav-links">
-    <a href={home}>Home</a>
-    <a href={home + "/serramenti"}>Serramenti</a>
-    <a href={home + "/progettazione"}>Progettazione</a>
-    <a href={home + "/pratiche"}>Pratiche</a>
-    <a href={home + "/lavori"}>Lavori</a>
-    <a href={home + "/contatti"}>Contatti</a>
+
+<Navbar class="navbar-expand-lg" data-bs-theme="light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href={home}><Image src={logoBioProject} height="150" alt="Logo Bio Project" /></a>
+    <Navbar.Toggler controls={id} />
+    <Navbar.Collapse {id}>
+      <Navbar.Items {items} class="me-auto mb-2 mb-lg-0" />
+    </Navbar.Collapse>
   </div>
-</div>
-
-
-<style>
-  .logo:hover {
-    text-decoration: none;
-  }
-</style>
+</Navbar>
