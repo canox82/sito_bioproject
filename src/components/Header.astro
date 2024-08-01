@@ -6,7 +6,7 @@ import logoBioProject from "/src/pages/img/logo.png";
 import { Navbar } from 'astro-bootstrap';
 import type { NavbarItemType } from 'astro-bootstrap';
 // demonstration data
-const siteTitle = 'Astro site'; // pull this in from a config file
+const siteTitle = 'Bio Project'; // pull this in from a config file
 const items: NavbarItemType[] = [
   // pull this in from a config file
   { text: 'Home', href: '/sito_bioproject' },
@@ -15,10 +15,9 @@ const items: NavbarItemType[] = [
   { text: 'Pratiche', href: '/sito_bioproject/pratiche' },
   { text: 'Lavori', href: '/sito_bioproject/lavori' },
   { text: 'Contatti', href: '/sito_bioproject/contatti' },
- 
 ];
 
-const id = 'navbarDemo';
+const id = 'Menu';
 ---
 
 <Navbar class="navbar-expand-lg" data-bs-theme="light">
