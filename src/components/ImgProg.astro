@@ -13,7 +13,7 @@ interface Props {
  if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "/src/pages/img/progettazione/*.{jpeg,jpg,png,gif}"`);
  ---
  <div class="card" style="width: 13rem;">
-    <Image src={images[imagePath]()}  width="180" alt={altText} class="card-img-top" /></a>
+    <Image src={images[imagePath]()}  width="180" alt={altText} class="card-img-top" />
     <div class="card-body">
         <h6 class="card-title">{name}</h6>
     </div>
