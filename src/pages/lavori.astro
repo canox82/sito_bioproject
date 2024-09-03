@@ -1,59 +1,56 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm.astro';
 ---
 
 <Layout title="Bio Project">
 	<main>
-		<p class="instructions">
-			Pagina LAVORI in lavorazione...
-			<p>
-				Compila il modulo per richiedere informazioni <br />
-				<form action="https://docs.google.com/forms/d/e/1FAIpQLScunKMJst52Y_Mi45HW-nMcyJU__5PSCFS5H-ulB-_DjUUDBw/formResponse" method="post">
-					<label>
-					  Nome:
-					  <input 
-							 type="text" 
-							 name="entry.958821813" 
-							 aria-label="Full name" 
-							 placeholder="Nome e Cognome" 
-							 id="name" 
-							 required />
-					</div>
-					</label>
-					<br />
-					<label>
-					  Email:
-					  <input 
-							 type="email" 
-							 name="entry.381145308" 
-							 aria-label="Email" 
-							 placeholder="yourname@mail.com" 
-							 id="email" 
-							 required />
-					</label>
-					<br />
-					<label>
-						Numero di telefono:
-						<input  
-							 type="text" 
-							 name="entry.1288614241" 
-							 aria-label="Telefono" 
-							 placeholder="Telefono" 
-							 id="telefono" 
-							 required />
-					  </label>
-					<label>
-					  Richiesta:
-					</label>
-					<br />
-					<textarea id="richiesta" name="entry.1708826473" rows="5" cols="50" required />
-					<br />
-					<button>Invia</button>
-				  </form>
-			</p>
-		</p>
-		
-		
+		<p>
+			<p>Compila il modulo sottostante per sottoporci la tua richiesta, ti risponderemo quanto prima</p>
+		<p>
+			<form action="https://docs.google.com/forms/d/e/1FAIpQLScunKMJst52Y_Mi45HW-nMcyJU__5PSCFS5H-ulB-_DjUUDBw/formResponse" method="post">
+				<label>
+				  Nome:
+				  <input 
+						 type="text" 
+						 name="entry.958821813" 
+						 aria-label="Nome o Azienda" 
+						 placeholder="Nome e Cognome" 
+						 id="name" 
+						 required />
+				</div>
+				</label>
+				<br />
+				<label>
+				  Email:
+				  <input 
+						 type="email" 
+						 name="entry.381145308" 
+						 aria-label="Email" 
+						 placeholder="nome@mail.com" 
+						 id="email" 
+						 required />
+				</label>
+				<br />
+				<label>
+					Numero di telefono:
+					<input  
+						 type="text" 
+						 name="entry.1288614241" 
+						 aria-label="Telefono" 
+						 placeholder="Telefono" 
+						 id="telefono" 
+						 required />
+				  </label>
+				<label>
+				  Richiesta:
+				</label>
+				<br />
+				<textarea id="richiesta" name="entry.1708826473" rows="5" cols="50" required />
+				<br />
+				<button>Invia</button>
+			  </form>
+		</p>	
 	</main>
 </Layout>
 
