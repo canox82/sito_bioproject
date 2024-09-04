@@ -3,7 +3,7 @@ import Layout from './Layout.astro';
 const { frontmatter } = Astro.props;
 ---
 <Layout title={frontmatter.title}>
-  <div class="center">
+  <div class="w-75 mx-auto text-center">
   <h2>{frontmatter.title}</h2>
   <h5><em>"{frontmatter.description}"</em></h5>
   <br />
@@ -13,9 +13,4 @@ const { frontmatter } = Astro.props;
 </BaseLayout>
 
 <style>
-  .center {
-    text-align: center;
-    width: 70%; /* Adjust as needed */
-    margin: 0 auto;
-  }
 </style>

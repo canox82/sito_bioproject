@@ -1,0 +1,30 @@
+---
+layout: ../../layouts/MarkdownLayout.astro
+title: 'B&B La Lucchina'
+pubDate: 2022-07-01
+description: 'Un bed and breakfast sulle colline di Maranello'
+preimg: '/src/pages/img/lavori/lucchina_01.png'
+image:
+    url: '/sito_bioproject/img/lavori/lucchina_01.png'
+    alt: 'Villa Daniela'
+tags: ["case di legno", "bioedilizia"]
+---
+import { Image } from 'astro:assets';
+import Vista_01 from '../img/lavori/lucchina_02.png';
+import Vista_02 from '../img/lavori/lucchina_03.png';
+import Vista_03 from '../img/lavori/lucchina_04.png';
+import Vista_04 from '../img/lavori/lucchina_05.png';
+
+<br />
+Un bed and breakfast sulle colline di Maranello con ampio parcheggio seminterrato. <br />
+Composto da due moduli base, il primo costituito da 4 mini-appartamenti e l'altro da appartamenti più stanze al piano superiore, collegati da una scala centrale che porta al parcheggio seminterrato. <br />
+Entrambi i moduli hanno la vista sull'ampio giardino, sulla valle e sul bosco al confine della proprietà. <br />
+<div class="w-75 mx-auto vstack gap-1">
+    <Image src={Vista_01} alt="Vista B&B Lucchina" class="img-fluid" />
+    <br />
+    <Image src={Vista_02} alt="Vista B&B Lucchina" class="img-fluid" />
+    <br />
+    <Image src={Vista_03} alt="Vista B&B Lucchina" class="img-fluid" />
+    <br />
+    <Image src={Vista_04} alt="Vista B&B Lucchina" class="img-fluid" />
+</div>

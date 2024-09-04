@@ -1,0 +1,35 @@
+---
+layout: ../../layouts/MarkdownLayout.astro
+title: 'Villa Daniela'
+pubDate: 2022-07-01
+description: 'Un progetto di recupero in campagna'
+preimg: '/src/pages/img/lavori/daniela_01.png'
+image:
+    url: '/sito_bioproject/img/lavori/daniela_01.png'
+    alt: 'Villa Daniela'
+tags: ["case di legno", "bioedilizia"]
+---
+import { Image } from 'astro:assets';
+import Vista_01 from '../img/lavori/daniela_02.png';
+import Vista_02 from '../img/lavori/daniela_03.png';
+import Vista_03 from '../img/lavori/daniela_04.png';
+import Vista_04 from '../img/lavori/daniela_05.png';
+import Vista_05 from '../img/lavori/daniela_06.png';
+
+<br />
+Un ambizioso progetto di recupero di un antico fabbricato rurale nelle campagne modenesi. <br />
+La villa è costruita totalmente secondo le migliori tecnologie della bioedilizia moderna mantenendo un aspetto rustico in linea con l'ambiente circostante e garantendo alti margini di sicurezza date le richieste delle leggi comunali vista la presenza di un canale vicino alla proprietà. <br />
+<br />
+La scelta dei colori chiari che richiamano le terre, i coppi in materiale naturale e l'ampio verde garantiscono una vita dal sapore "agricolo" pur con tutti gli agi e le sicurezze garantiti dalla modernità. <br />
+
+<div class="w-75 mx-auto vstack gap-1">
+    <Image src={Vista_01} alt="Vista villa Daniela" class="img-fluid" />
+    <br />
+    <Image src={Vista_02} alt="Vista villa Daniela" class="img-fluid" />
+    <br />
+    <Image src={Vista_03} alt="Vista villa Daniela" class="img-fluid" />
+    <br />
+    <Image src={Vista_04} alt="Vista villa Daniela" class="img-fluid" />
+    <br />
+    <Image src={Vista_05} alt="Vista villa Daniela" class="img-fluid" />
+</div>

@@ -1,24 +1,36 @@
 ---
 interface Props {
-	title: string;
+	titolo: string;
 }
 
-const { title } = Astro.props;
+const { titolo } = Astro.props;
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/global.css';
+import {SEO} from 'astro-seo';
 ---
 
 <!doctype html>
 <html lang="it">
 	<head>
+		<SEO
+			title={titolo}
+			description="Progettazione e costruzione edifici in bioedilizia, legno, xlam. Vendita infissi isolanti in PVC, alluminio e legno. Preparazione pratiche edilizie."
+			openGraph={{
+			basic: {
+				title: "Bio Project Srls - Progettazione edifici in bioedilizia e serramenti",
+				type: "website",
+				image: "/favicon.svg",
+			}
+			}}
+		/>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{titolo}</title>
 	</head>
 	<body>
 		<main>

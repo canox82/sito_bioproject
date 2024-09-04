@@ -1,57 +1,32 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ContactForm from '../components/ContactForm.astro';
+import Modulo from '../components/Modulo.astro';
+
+import ImgLav from '../components/ImgLav.astro';
+const allPosts = await Astro.glob('./lavori/*.mdx');
 ---
 
-<Layout title="Bio Project">
+<Layout titolo="Bio Project Srls - Lavori">
 	<main>
+		<p class="instructions">
+			I NOSTRI LAVORI 
+		</p>
 		<p>
-			<p>Compila il modulo sottostante per sottoporci la tua richiesta, ti risponderemo quanto prima</p>
-		<p>
-			<form action="https://docs.google.com/forms/d/e/1FAIpQLScunKMJst52Y_Mi45HW-nMcyJU__5PSCFS5H-ulB-_DjUUDBw/formResponse" method="post">
-				<label>
-				  Nome:
-				  <input 
-						 type="text" 
-						 name="entry.958821813" 
-						 aria-label="Nome o Azienda" 
-						 placeholder="Nome e Cognome" 
-						 id="name" 
-						 required />
-				</div>
-				</label>
-				<br />
-				<label>
-				  Email:
-				  <input 
-						 type="email" 
-						 name="entry.381145308" 
-						 aria-label="Email" 
-						 placeholder="nome@mail.com" 
-						 id="email" 
-						 required />
-				</label>
-				<br />
-				<label>
-					Numero di telefono:
-					<input  
-						 type="text" 
-						 name="entry.1288614241" 
-						 aria-label="Telefono" 
-						 placeholder="Telefono" 
-						 id="telefono" 
-						 required />
-				  </label>
-				  <br />
-				<label>
-				  Richiesta:
-				</label>
-				<br />
-				<textarea id="richiesta" name="entry.1708826473" rows="5" cols="50" required />
-				<br />
-				<button>Invia</button>
-			  </form>
-		</p>	
+			Le case che abbiamo costruito per i Nostri clienti
+		</p>
+		<ul role="list" class="link-card-grid">
+			{allPosts.map((post) =>
+					<a style="text-decoration: none;" href={post.url}>
+						<ImgLav 
+							imagePath={post.frontmatter.preimg}
+							altText={post.frontmatter.title}
+							name={post.frontmatter.title}
+							description={post.frontmatter.description}
+						/>
+					</a>
+			)}
+		</ul>
+		<Modulo />
 	</main>
 </Layout>
 

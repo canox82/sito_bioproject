@@ -1,0 +1,25 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+    imagePath: string;
+    altText: string;
+    name: string;
+    description: string;
+ }
+ 
+ const { imagePath, altText, name, description } = Astro.props;
+ const images = import.meta.glob<{ default: ImageMetadata }>('/src/pages/img/lavori/*.{jpeg,jpg,png,gif}')
+ if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "/src/pages/img/lavori/*.{jpeg,jpg,png,gif}"`);
+ ---
+ <div class="card d-flex border" style="width: 13rem;height:220px; !important;">
+    <Image src={images[imagePath]()}  height="110" alt={altText} class="card-img-top" />
+    <div class="card-body mb-0">
+        <h6 class="card-title">{name}</h6> 
+        <p>{description}</p>
+    </div>
+</div>
+
+<style>
+</style>
