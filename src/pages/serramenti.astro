@@ -6,6 +6,8 @@ import { Image } from 'astro:assets';
 import logoSimar from './img/serramenti/logo_simar.png';
 import logoPinto from './img/serramenti/logo_pinto.png';
 import logoSchipani from './img/serramenti/logo_schipani.png';
+import logoKadeco from './img/serramenti/logo_kadeco.png';
+import logoFinstral from './img/serramenti/logo_finstral.jpg';
 ---
 
 <Layout titolo="Bio Project Srls - Serramenti">
@@ -14,6 +16,8 @@ import logoSchipani from './img/serramenti/logo_schipani.png';
 			SERRAMENTI
 		</p>
 		<p>
+			Da anni collaboriamo con importanti brand leader del settore, contattaci con fiducia o visita il nostro showroom per farti un'idea della soluzione più adatta alle tue esigenze, in caso di dubbi o necessità siamo pronti a consigliarti al meglio e guidarti nella scelta più idonea. <br />
+			<br />
 			Seleziona uno dei nostri partner per visualizzare il relativo catalogo
 		</p>
 		<ul role="list" class="link-card-grid">
@@ -38,6 +42,22 @@ import logoSchipani from './img/serramenti/logo_schipani.png';
 					<Image src={logoSimar} width="200" alt="Logo Simar" class="card-img-top" />
 					<div class="card-body text-center">
 						<h6 class="card-title">Catalogo Simar Srl</h6>
+					</div>
+				</li>
+			</a>
+			<a href="https://kollektion.kadeco.de/" target="#new">
+				<li class="card mx-auto my-3" style="width: 15rem;">
+					<Image src={logoKadeco} width="200" alt="Logo Kadeco" class="card-img-top" />
+					<div class="card-body text-center">
+						<h6 class="card-title">Catalogo Kadeco</h6>
+					</div>
+				</li>
+			</a>
+			<a href="https://www.finstral.com/it/informazioni/cataloghi/38-0.html?lFilterID=20308,20312" target="#new">
+				<li class="card mx-auto my-3" style="width: 15rem;">
+					<Image src={logoFinstral} width="200" alt="Logo Finstral" class="card-img-top" />
+					<div class="card-body text-center">
+						<h6 class="card-title">Catalogo Finstral</h6>
 					</div>
 				</li>
 			</a>
