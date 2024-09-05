@@ -8,6 +8,7 @@ import logoPinto from './img/serramenti/logo_pinto.png';
 import logoSchipani from './img/serramenti/logo_schipani.png';
 import logoKadeco from './img/serramenti/logo_kadeco.png';
 import logoFinstral from './img/serramenti/logo_finstral.jpg';
+import logoSalamander from './img/serramenti/logo_salamander.png'
 ---
 
 <Layout titolo="Bio Project Srls - Serramenti">
@@ -20,54 +21,58 @@ import logoFinstral from './img/serramenti/logo_finstral.jpg';
 			<br />
 			Seleziona uno dei nostri partner per visualizzare il relativo catalogo
 		</p>
-		<ul role="list" class="link-card-grid">
+		<div role="list" class="d-flex justify-content-around flex-wrap link-card-grid align-items-center align-middle">
 			<a href="https://www.pinto.srl/configuratore/" target="#new">
-				<li class="card mx-auto my-3" style="width: 15rem;">
+				<div class="my-2">
 					<Image src={logoPinto} width="200" alt="Logo Pinto" class="card-img-top" />
-					<div class="card-body text-center">
-						<h6 class="card-title">Catalogo Pinto Srl</h6>
-					</div>
-				</li>
+				</div>
 			</a>
 			<a href="https://www.schipanisrl.com/prodotti" target="#new">
-				<li class="card mx-auto my-3" style="width: 15rem;">
+				<div class="my-2">
 					<Image src={logoSchipani} width="200" alt="Logo Schipani" class="card-img-top" />
-					<div class="card-body text-center">
-						<h6 class="card-title">Catalogo Schipani Srl</h6>
-					</div>
-				</li>
+				</div>
 			</a>
 			<a href="https://www.simarsrl.it/" target="#new">
-				<li class="card mx-auto my-3" style="width: 15rem;">
+				<div class="my-2">
 					<Image src={logoSimar} width="200" alt="Logo Simar" class="card-img-top" />
-					<div class="card-body text-center">
-						<h6 class="card-title">Catalogo Simar Srl</h6>
-					</div>
-				</li>
+				</div>
 			</a>
 			<a href="https://kollektion.kadeco.de/" target="#new">
-				<li class="card mx-auto my-3" style="width: 15rem;">
+				<div class="my-2">
 					<Image src={logoKadeco} width="200" alt="Logo Kadeco" class="card-img-top" />
-					<div class="card-body text-center">
-						<h6 class="card-title">Catalogo Kadeco</h6>
-					</div>
-				</li>
+				</div>
 			</a>
 			<a href="https://www.finstral.com/it/informazioni/cataloghi/38-0.html?lFilterID=20308,20312" target="#new">
-				<li class="card mx-auto my-3" style="width: 15rem;">
+				<div class="my-2">
 					<Image src={logoFinstral} width="200" alt="Logo Finstral" class="card-img-top" />
-					<div class="card-body text-center">
-						<h6 class="card-title">Catalogo Finstral</h6>
-					</div>
-				</li>
+				</div>
 			</a>
-		</ul>
+			<a href="https://salamanderpvc.it/download-salamander/download-marketing/?pagename=download-salamander%2Fdownload-marketing&file=%252FM_catalogo-marketing.pdf" target="#new">
+				<div class="my-2">
+					<Image src={logoSalamander} width="200" alt="Logo Finstral" class="card-img-top" />
+				</div>
+			</a>
+		</div>
 		<p>
 		<Modulo />
 	</main>
 </Layout>
 
 <style>
+	.card {
+        /* Add shadows to create the "card" effect */
+        /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;*/
+        border: none;
+        text-decoration: none;
+        
+    }
+
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        border:none;
+    }
 	.instructions {
 		margin-bottom: 2rem;
 		border: 1px solid rgba(var(--accent-light), 35%);
