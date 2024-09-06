@@ -12,8 +12,8 @@ interface Props {
  const images = import.meta.glob<{ default: ImageMetadata }>('/src/pages/img/progettazione/*.{jpeg,jpg,png,gif}')
  if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "/src/pages/img/progettazione/*.{jpeg,jpg,png,gif}"`);
  ---
- <div class="card d-flex border" style="width: 13rem;height:170px; !important;"> 
-    <Image src={images[imagePath]()}  height="110" alt={altText} class="card-img-top" />
+ <div class="card d-flex border mx-auto" style="width: 13rem;height:170px; !important;"> 
+    <Image src={images[imagePath]()}  height="110" alt={altText} class="card-img-top" loading="eager" />
     <div class="card-body mb-0">
         <h6 class="card-title">{name}</h6>
     </div>

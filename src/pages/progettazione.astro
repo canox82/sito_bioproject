@@ -14,7 +14,7 @@ const allPosts = await Astro.glob('./progettazione/*.mdx');
 		<ul role="list" class="link-card-grid">
 			{allPosts.map((post) =>
 					<a href={post.url}>
-						<ImgProg 
+						<ImgProg
 							imagePath={post.frontmatter.preimg}
 							altText={post.frontmatter.title}
 							name={post.frontmatter.title}
