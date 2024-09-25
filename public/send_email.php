@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $to = "info@bio-project.it";
     $subject = "Nuovo messaggio dal modulo di contatto su www.bio-project.it";
-    $body = "Nome: $name\nEmail: $email\nTelefono: $telefono\n\nRichiesta:\n$message";
+    $body = "Nome: $name\nEmail: $email\nTelefono: $telefono\n\nRichiesta:\n$richiesta";
     $headers = "From: $email";
 
     if (mail($to, $subject, $body, $headers)) {
