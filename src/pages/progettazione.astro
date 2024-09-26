@@ -11,6 +11,10 @@ const allPosts = await Astro.glob('./progettazione/*.mdx');
 		<p class="instructions">
 			PROGETTAZIONE
 		</p>
+		<p>
+			Progettiamo e costruiamo case in legno ecosostenibile ad alto risparmio energetico, di seguito puoi vedere qualche esempio personalizzabile. <br />
+			Contattaci per avere maggiori informazioni a riguardo.
+		</p>
 		<ul role="list" class="link-card-grid">
 			{allPosts.map((post) =>
 					<a href={post.url}>
