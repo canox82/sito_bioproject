@@ -1,0 +1,28 @@
+---
+layout: ../../layouts/MarkdownLayout.astro
+title: 'Villa a Rivolta d''Adda'
+pubDate: 2022-07-01
+description: 'Una villa dal taglio classico ma con tutte le tecnologie moderne'
+preimg: '/src/pages/img/lavori/rivoltadadda_01.png'
+image:
+    url: '/sito_bioproject/img/lavori/rivoltadadda_01.png'
+    alt: 'Una villa dal taglio classico ma con tutte le tecnologie moderne'
+tags: ["case di legno", "bioedilizia"]
+---
+import { Image } from 'astro:assets';
+import Vista_01 from '../img/lavori/rivoltadadda_02.png';
+import Vista_02 from '../img/lavori/rivoltadadda_03.png';
+import Vista_03 from '../img/lavori/rivoltadadda_04.png';
+
+<br />
+Una villa dal taglio classico con elementi in pietra che nasconde al suo interno tutti gli elementi tecnologici moderni, che la portano ad essere di classe superiore ed autosufficiente. <br/>
+<br />
+
+
+<div class="w-75 mx-auto vstack gap-1">
+    <Image src={Vista_01} alt="Una villa dal taglio classico ma con tutte le tecnologie moderne" class="img-fluid" />
+    <br />
+    <Image src={Vista_02} alt="Una villa dal taglio classico ma con tutte le tecnologie moderne" class="img-fluid" /> 
+    <br />
+    <Image src={Vista_03} alt="Una villa dal taglio classico ma con tutte le tecnologie moderne" class="img-fluid" />
+</div>

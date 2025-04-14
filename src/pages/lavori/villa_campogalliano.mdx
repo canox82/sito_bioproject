@@ -1,0 +1,35 @@
+---
+layout: ../../layouts/MarkdownLayout.astro
+title: 'Villa Campogalliano'
+pubDate: 2022-07-01
+description: 'Tre villette a schiera nelle campagna emiliana'
+preimg: '/src/pages/img/lavori/campogalliano_01.png'
+image:
+    url: '/sito_bioproject/img/lavori/campogalliano_01.png'
+    alt: 'Tre villette nelle campagne emiliane'
+tags: ["case di legno", "bioedilizia"]
+---
+import { Image } from 'astro:assets';
+import Vista_01 from '../img/lavori/campogalliano_02.png';
+import Vista_02 from '../img/lavori/campogalliano_03.png';
+import Vista_03 from '../img/lavori/campogalliano_04.png';
+import Vista_04 from '../img/lavori/campogalliano_05.png';
+import Vista_05 from '../img/lavori/campogalliano_06.png';
+
+<br />
+Tre villette a schiera unite in unico armonioso edificio che si integra perfettamente con gli edifici circostanti. <br/>
+Ogni unità ha accesso ad uno spazioso giardino e a due piani con zona giorno al piano inferiore e zona notte a quello superiore.
+<br />
+
+
+<div class="w-75 mx-auto vstack gap-1">
+    <Image src={Vista_01} alt="Tre villette nelle campagne emiliane" class="img-fluid" />
+    <br />
+    <Image src={Vista_02} alt="Tre villette nelle campagne emiliane" class="img-fluid" /> 
+    <br />
+    <Image src={Vista_03} alt="Tre villette nelle campagne emiliane" class="img-fluid" />
+    <br />
+    <Image src={Vista_04} alt="Tre villette nelle campagne emiliane" class="img-fluid" />
+    <br />
+    <Image src={Vista_05} alt="Tre villette nelle campagne emiliane" class="img-fluid" />
+</div>

@@ -1,0 +1,28 @@
+---
+layout: ../../layouts/MarkdownLayout.astro
+title: 'Villa Crema'
+pubDate: 2022-07-01
+description: 'Una villa nelle campagne di Crema'
+preimg: '/src/pages/img/lavori/crema_01.png'
+image:
+    url: '/sito_bioproject/img/lavori/crema_01.png'
+    alt: 'Una villa nelle campagne cremasche'
+tags: ["case di legno", "bioedilizia"]
+---
+import { Image } from 'astro:assets';
+import Vista_01 from '../img/lavori/crema_02.png';
+import Vista_02 from '../img/lavori/crema_03.png';
+import Vista_03 from '../img/lavori/crema_04.png';
+
+<br />
+Una villa dal taglio classico, dai colori morbidi degli intonaci alle raffinate rifiniture facciavista, con le porte ad arco che richiamano un mondo rustico dal passato che abbraccia la modernità dei materiali e delle tecnologie utilizzate nella costruzione dell'edificio. 
+<br />
+
+
+<div class="w-75 mx-auto vstack gap-1">
+    <Image src={Vista_01} alt="Una villa nelle campagne cremasche" class="img-fluid" />
+    <br />
+    <Image src={Vista_02} alt="Una villa nelle campagne cremasche" class="img-fluid" /> 
+    <br />
+    <Image src={Vista_03} alt="Una villa nelle campagne cremasche" class="img-fluid" />
+</div>
