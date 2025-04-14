@@ -1,0 +1,35 @@
+---
+layout: ../../layouts/MarkdownLayout.astro
+title: 'Villa Laura e Matteo'
+pubDate: 2022-07-01
+description: 'Una villa moderna per una coppia dinamica'
+preimg: '/src/pages/img/lavori/laura_matteo_01.png'
+image:
+    url: '/sito_bioproject/img/lavori/laura_matteo_01.png'
+    alt: 'Villa Laura e Matteo'
+tags: ["case di legno", "bioedilizia"]
+---
+import { Image } from 'astro:assets';
+import Vista_01 from '../img/lavori/laura_matteo_02.png';
+import Vista_02 from '../img/lavori/laura_matteo_03.png';
+import Vista_03 from '../img/lavori/laura_matteo_04.png';
+import Vista_04 from '../img/lavori/laura_matteo_05.png';
+import Vista_05 from '../img/lavori/laura_matteo_06.png';
+
+<br />
+Una villa moderna per una coppia giovane e dinamica sulle colline emiliane. <br />
+La villa è costruita secondo le migliori tecnologie della bioedilizia moderna su un unico piano, le ampie vetrate garantiscono da ogni punto l'accessibilità e la vista sull'arioso giardino che la circonda. <br />
+<br />
+
+
+<div class="w-75 mx-auto vstack gap-1">
+    <Image src={Vista_01} alt="Vista villa Laura e Matteo" class="img-fluid" />
+    <br />
+    <Image src={Vista_02} alt="Vista villa Laura e Matteo" class="img-fluid" /> 
+    <br />
+    <Image src={Vista_03} alt="Vista villa Laura e Matteo" class="img-fluid" />
+    <br />
+    <Image src={Vista_04} alt="Vista villa Laura e Matteo" class="img-fluid" />
+    <br />
+    <Image src={Vista_05} alt="Vista villa Laura e Matteo" class="img-fluid" />
+</div>
