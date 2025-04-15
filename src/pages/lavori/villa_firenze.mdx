@@ -1,0 +1,38 @@
+---
+layout: ../../layouts/MarkdownLayout.astro
+title: 'Villa Firenze'
+pubDate: 2022-07-01
+description: 'Una villa moderna nelle colline toscane'
+preimg: '/src/pages/img/lavori/firenze_01.png'
+image:
+    url: '/sito_bioproject/img/lavori/firenze_01.png'
+    alt: 'Una villa moderna tra le colline toscane'
+tags: ["case di legno", "bioedilizia"]
+---
+import { Image } from 'astro:assets';
+import Vista_01 from '../img/lavori/firenze_02.png';
+import Vista_02 from '../img/lavori/firenze_03.png';
+import Vista_03 from '../img/lavori/firenze_04.png';
+import Vista_04 from '../img/lavori/firenze_05.png';
+import Vista_05 from '../img/lavori/firenze_06.png';
+
+<br />
+Una splendida villa moderna immersa tra le colline toscane <br />
+<br />
+Disposta su due piani, il piano terra è diviso tra zona giorno e zona notte, con un ampio soggiorno con finestre scorrevoli a vista sull'ampio giardino con piscina. <br />
+Al piano superiore è posizionato un locale trasformabile in futuro in mini appartamento. <br />
+Le finiture degli esterni in pietra richiamano l'ambiente montano circostante.
+<br />
+
+
+<div class="w-75 mx-auto vstack gap-1">
+    <Image src={Vista_01} alt="Una villa moderna tra le colline toscane" class="img-fluid" />
+    <br />
+    <Image src={Vista_02} alt="Una villa moderna tra le colline toscane" class="img-fluid" /> 
+    <br />
+    <Image src={Vista_03} alt="Una villa moderna tra le colline toscane" class="img-fluid" />
+    <br />
+    <Image src={Vista_04} alt="Una villa moderna tra le colline toscane" class="img-fluid" />
+    <br />
+    <Image src={Vista_05} alt="Una villa moderna tra le colline toscane" class="img-fluid" />
+</div>
