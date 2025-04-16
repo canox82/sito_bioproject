@@ -1,14 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Modulo from '../components/Modulo.astro';
+import { Image } from 'astro:assets';
+import esterno from './img/contatti/esterno.png';
+import interno from './img/contatti/interno.png';
+
 ---
+
+
 
 <Layout titolo="Bio Project Srls - Case in legno, serramenti e bioedilizia - Contatti">
 	<main>
 		<p class="instructions">
 			CONTATTI
 		</p>
-
+		<center>
+		<Image src={esterno} alt="Vista esterno showroom Bio Project Srls a Casalgrande, via Statale 37" class="img-fluid w-75" />
+		<Image src={interno} alt="Vista interno showroom Bio Project Srls a Casalgrande, via Statale 37" class="img-fluid w-75" />
+		</center>
+		<br />
 		<p>
 			Ci potete contattare al numero di telefono 0522 548703 <br/>
 			E all'indirizzo email <a href="mailto:info@bio-project.it">info@bio-project.it</a>
