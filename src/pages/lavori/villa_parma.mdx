@@ -1,0 +1,29 @@
+---
+layout: ../../layouts/MarkdownLayout.astro
+title: 'Una grande villa a Parma'
+pubDate: 2022-07-01
+description: 'Una grande villa su due piani con grande garage'
+preimg: '/src/pages/img/lavori/villa_parma_01.png'
+image:
+    url: '/sito_bioproject/img/lavori/villa_parma_01.png'
+    alt: 'Una grande villa su due piani con grande garage'
+tags: ["case di legno", "bioedilizia"]
+---
+import { Image } from 'astro:assets';
+import Vista_01 from '../img/lavori/villa_parma_02.png';
+import Vista_02 from '../img/lavori/villa_parma_03.png';
+import Vista_03 from '../img/lavori/villa_parma_04.png';
+
+<br />
+Una grande villa dal taglio classico e dai colori caldi e rappresentativi della cittadina parmense. <br />
+<br />
+Al piano terra troviamo la zona giorno con l'immenso soggiorno, la cucina, lo studio e il grande garage dotato di ampie cantine. Salendo al secondo piano troviamo la zona notte con grandi camere. L'intero edificio è dotato di affacci sui quattri lati sul grande giardino di proprietà.
+<br />
+
+<div class="w-75 mx-auto vstack gap-1">
+    <Image src={Vista_01} alt="Una grande villa su due piani con grande garage" class="img-fluid" />
+    <br />
+    <Image src={Vista_02} alt="Una grande villa su due piani con grande garage" class="img-fluid" /> 
+    <br />
+    <Image src={Vista_03} alt="Una grande villa su due piani con grande garage" class="img-fluid" />
+</div>

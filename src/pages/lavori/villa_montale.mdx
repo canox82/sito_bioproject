@@ -1,0 +1,34 @@
+---
+layout: ../../layouts/MarkdownLayout.astro
+title: 'Villa a Montale'
+pubDate: 2022-07-01
+description: 'Una grande villa su due piani dallo stile classico'
+preimg: '/src/pages/img/lavori/montale_01.png'
+image:
+    url: '/sito_bioproject/img/lavori/montale_01.png'
+    alt: 'Una grande villa su due piani dallo stile classico'
+tags: ["case di legno", "bioedilizia"]
+---
+import { Image } from 'astro:assets';
+import Vista_01 from '../img/lavori/montale_02.png';
+import Vista_02 from '../img/lavori/montale_03.png';
+import Vista_03 from '../img/lavori/montale_04.png';
+import Vista_04 from '../img/lavori/montale_05.png';
+import Vista_05 from '../img/lavori/montale_06.png';
+import Vista_06 from '../img/lavori/montale_07.png';
+
+<br />
+Una villa di grandi dimensioni e dal taglio classico costruita a Montale. <br />
+<br />
+Composta da due piani, al primo troviamo una grande zona giorno, parte della zona notte, le cantine e il grande garage. Al secondo piano troviamo la seconda parte della zona notte con la camera padronale. <br />
+Le zone al secondo piano possono in futuro essere rese indipendenti per ricavare appartamento indipendente.
+<br />
+
+
+<div class="w-75 mx-auto vstack gap-1">
+    <Image src={Vista_01} alt="Una grande villa su due piani con grande garage" class="img-fluid" />
+    <br />
+    <Image src={Vista_02} alt="Una grande villa su due piani con grande garage" class="img-fluid" /> 
+    <br />
+    <Image src={Vista_03} alt="Una grande villa su due piani con grande garage" class="img-fluid" />
+</div>
