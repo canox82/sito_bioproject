@@ -2,7 +2,7 @@
 import Layout from './Layout.astro';
 const { frontmatter } = Astro.props;
 ---
-<Layout titolo={frontmatter.title}>
+<Layout titolo={"Bio Project Srls - Progettazione edifici in bioedilizia e serramenti - "+frontmatter.title}>
   <div class="w-75 mx-auto text-center mb-2">
     <h2>{frontmatter.title}</h2>
     <h5><em>"{frontmatter.description}"</em></h5>
